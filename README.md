@@ -1,5 +1,4 @@
-portfolio
-<<<<<<< HEAD
-=======
-=========
->>>>>>> eb84c18bc01c37714bda4f22f11df07580934934
+New portfolio using: 
+- Sinatra
+- Compass
+- HAML
