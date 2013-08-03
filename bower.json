@@ -1,0 +1,8 @@
+{
+  "name": "gonzalez-portfolio",
+  "version": "0.1",
+  "dependencies": {
+    "jquery": "master",
+    "jquery-cycle": "master"
+  }
+}
