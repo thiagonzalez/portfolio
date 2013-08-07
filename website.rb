@@ -4,22 +4,22 @@ require 'sinatra'
 require 'haml'
 
 
-# Sinatra options
-configure do
-  set :haml, {:format => :html5, :escape_html => true}
-  set :scss, {:style => :compact, :debug_info => false}
-  Compass.add_project_configuration(File.join(Sinatra::Application.root, 'config', 'compass.rb'))
+class SassEngine < Sinatra::Base
+  set :views, File.join('public', 'stylesheets')
+
+  get '/:file.css' do
+    scss params[:file].to_sym, Compass.sass_engine_options.merge(style: :compact)
+  end
 end
 
+class ThiagoGonzalezApp < Sinatra::Base
+  use SassEngine
 
-# Compass options
-get '/stylesheets/:name.css' do
-  content_type 'text/css', :charset => 'utf-8'
-  scss(:"stylesheets/#{params[:name]}" ) 
-end
+  # Application configuration
+  set :run, false
+  set :haml, format: :html5
 
-
-# URLs
-get '/' do
-  haml :index
+  get '/' do
+    haml :index
+  end
 end

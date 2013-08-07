@@ -1,0 +1,163 @@
+@import "reset";
+@import "fonts/textmeone";
+@import "fonts/opensans";
+@import "compass/border-radius";
+@import "compass/opacity";
+
+$color: #6fc5dc;
+// $color_rgb: "111, 197, 220";
+
+$color_hover: #d4124d;
+
+
+body {
+  background-color: #111;
+  font-family: 'Text Me One', sans-serif;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+
+#sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  padding: 0 60px 0 50px; 
+  height: 100%;
+  background: image-url('images/sidebar-bg.png') 0 0 repeat-y;
+
+  h3 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  h1 {     
+    width: 140px;
+    height: 140px;
+    margin: 30px auto;
+    font-size: 24px;
+    text-transform: uppercase;
+    
+    a {
+      text-align: center;
+      color: #fff;
+      @include border-radius(140px);  
+      width: 140px;
+      height: 115px;
+      padding: 25px 0 0;
+      background: $color;  
+      background: rgba(111, 197, 220, 0.5); 
+      display: block;
+      @include opacity(0.9);
+      transition: background 0.2s linear;
+
+      span {
+        @include opacity(0.6);
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        font-style: italic;
+        display: block;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: lowercase;
+        padding: 5px 20px 0;
+      }
+
+      &:hover {
+        background: $color_hover;
+        @include opacity(1);
+
+        span { 
+          @include opacity(1); 
+        }
+      }
+    }
+  }
+
+  #nav {
+    margin-bottom: 15px;
+    border-top: 1px solid #dcdcdc;
+    border-top: 1px solid rgba(220,220,220,0.15);
+
+    ul {
+      li {
+        a {
+          font-size: 20px;
+          text-transform: uppercase;
+          color: #999;
+          padding: 12px 0;
+          border-bottom: 1px solid #dcdcdc;
+          border-bottom: 1px solid rgba(220,220,220,0.15);
+          display: block;
+
+          &:hover {
+            color: $color_hover;
+            border-color: $color_hover;
+          }
+        }
+      }
+    }
+  }
+
+  #social {
+    overflow: hidden;
+    width: 160px;
+    margin: 0 auto 25px;
+
+    li {
+      float: left;
+      margin-right: 20px;
+
+      &:last-child { margin-right: 0; }
+
+      a {
+        width: 40px;
+        height: 40px;
+        @include border-radius(40px);
+        background: #333;
+        display: block;
+        text-indent: -9999em;
+        
+        &:hover { background: $color_hover; }
+      }
+    }
+  }
+
+  #knowledge {
+    ul {
+      li {
+        height: 15px;
+        width: 100%;
+        background: #000;
+        background: rgba(0,0,0,0.5);
+        border: 1px solid #000;
+        margin-bottom: 5px;
+        font-size: 10px;
+        line-height: 15px;
+        color: #999;
+        text-indent: 5px;
+        text-transform: uppercase;
+        font-family: Arial, Helvetica, sans-serif;
+
+        span {
+          background: $color_hover;
+          background: rgba(212,18,77,0.5);
+          height: 15px;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+#wrap {
+  padding: 30px 20px 0 320px;
+}

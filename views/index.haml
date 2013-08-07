@@ -1,108 +1,96 @@
 !!! 5
-%html{:lang => "pt"}
-	%head
-		%meta{:charset => "utf-8"}
-		%meta{:name => "keywords", :content => "desenvolvedor front-end, dev santos, websites, desenvolvedor de interfaces, xhtml, html5, css3, jquery, SEO, webstandards, sass, compass, ruby, rails, sinatra, haml, heroku"}
-		%meta{:name => "description", :content => "Desenvolvedor front-end desde 2010, mora em Santos, formado em Análise de Sistemas. Habilidades com xHTML, HTML5, CSS3, jQuery, SEO, Webstandards"}
-		%link{:href => "/favicon.png", :rel => "shortcut icon"}
+%html{:lang => "pt-br"}
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:name => "keywords", :content => "desenvolvedor front-end, dev santos, websites, desenvolvedor de interfaces, xhtml, html5, css3, jquery, SEO, webstandards, sass, compass, ruby, rails, sinatra, haml, heroku"}
+    %meta{:name => "description", :content => "Desenvolvedor front-end desde 2010, mora em Santos, formado em Análise de Sistemas. Habilidades com xHTML, HTML5, CSS3, jQuery, SEO, Webstandards"}
+    %link{:href => "/favicon.png", :rel => "shortcut icon"}
 
-		%title Thiago Gonzalez - Desenvolvedor Frontend  
+    %title Thiago Gonzalez - Desenvolvedor Frontend  
 
-		/ CSS
-		%link{:rel => "stylesheet", :href => "/stylesheets/style.css", :type => "text/css"}  
-		
-		/ Javascript
-		%script{:src => '#'}
+    %link{:rel => "stylesheet", :href => "/style.css", :type => "text/css"}  
 
-		/[if lt IE 9]
-			%script{:src => "http://html5shim.googlecode.com/svn/trunk/html5.js"}
+    %script{:src => "javascripts/jquery.js"}
+    %script{:src => "javascripts/main.js"}
+  
+    /[if lt IE 9]
+      %script{:src => "http://html5shim.googlecode.com/svn/trunk/html5.js"}
 
-	%body
-		%section#content 
+  %body
+    %section#content 
 
-			%aside#sidebar 
-				%h1 
-					Thiago Gonzalez
-					%span Desenvolvedor front-end
+      %aside#sidebar 
+        %h1 
+          %a{:href => '#'}
+            Thiago Gonzalez
+            %span Desenvolvedor front-end
 
-				%nav#nav 
-					%ul
-						%li
-							%a{:href => "/"} Portfolio
-						%li 
-							%a{:href => "/blog/"} Blog
-						%li 
-							%a{:href => "/sobre/"} Sobre
+        %nav#nav 
+          %ul
+            %li
+              %a{:href => "/"} Portfolio
+            %li 
+              %a{:href => "/blog/"} Blog
+            %li 
+              %a{:href => "/sobre/"} Sobre
 
-				%ul#social
-					%li 
-						%a{:href => "https://facebook.com/thigonzalez"} Facebook
-					%li 
-						%a{:href => "http://linkedin.com/thiagonzalez"} LinkedIn
-					%li 
-						%a{:href => "mailto:contato@thiagogonzalez.com"} Email
+        %ul#social
+          %li 
+            %a{:href => "https://facebook.com/thigonzalez"} Facebook
+          %li 
+            %a{:href => "http://linkedin.com/thiagonzalez"} LinkedIn
+          %li 
+            %a{:href => "mailto:contato@thiagogonzalez.com"} Email
 
-				#knowledge 
-					%h3 Conhecimentos
+        #knowledge 
+          %h3 Conhecimentos
 
-					%ul
-						%li 
-							%span HTML 5
-						%li 
-							%span CSS 3
-						%li 
-							%span Responsive
-						%li 
-							%span Facebook Apps
-						%li 
-							%span SEO
-						%li 
-							%span jQuery
-						%li 
-							%span HAML
-						%li 
-							%span Compass (SASS)
-						%li 
-							%span Ruby
-						%li 
-							%span Sinatra
-						%li 
-							%span Rails
-						%li 
-							%span Wordpress
+          %ul
+            %li{:'data-size' => '95', :'data-name' => 'HTML 5'}  
+            %li{:'data-size' => '95', :'data-name' => 'CSS 3'}
+            %li{:'data-size' => '80', :'data-name' => 'Responsive'}
+            %li{:'data-size' => '60', :'data-name' => 'Facebook Apps'} 
+            %li{:'data-size' => '80', :'data-name' => 'SEO'} 
+            %li{:'data-size' => '80', :'data-name' => 'jQuery'} 
+            %li{:'data-size' => '60', :'data-name' => 'HAML'} 
+            %li{:'data-size' => '60', :'data-name' => 'Compass (SASS)'}
+            %li{:'data-size' => '25', :'data-name' => 'Ruby'} 
+            %li{:'data-size' => '45', :'data-name' => 'Sinatra'} 
+            %li{:'data-size' => '25', :'data-name' => 'Rails'}
+            %li{:'data-size' => '95', :'data-name' => 'Wordpress'} 
 
-			#wrap
-				%h2 Portfolio
-				%form#filter{:action => "#", :method => "get"}
-					%select
-						%option{:value =>""} Filtrar por
-						%option{:value =>"HTML 5"} HTML 5
-						%option{:value =>"SASS"} SASS
-						%option{:value =>"Ruby"} Ruby
+      #wrap
+        %h2 Portfolio
+        %form#filter{:action => "#", :method => "get"}
+          %select
+            %option{:value =>""} Filtrar por
+            %option{:value =>"HTML 5"} HTML 5
+            %option{:value =>"SASS"} SASS
+            %option{:value =>"Ruby"} Ruby
 
-				#projects
+        #projects
 
-					- for i in (1..10) do
-						%article 
-							%a{:href => "#"}
-								%img{:src => "http://placehold.it/150x150/000", :alt => "Project", :class => "photo"}
+          - for i in (1..10) do
+            %article 
+              %a{:href => "#"}
+                %img{:src => "http://placehold.it/150x150/000", :alt => "Project", :class => "photo"}
 
-								.desc
-									%h5 
-										%a{:href => "#"} Ib8 Tecnologia Website
-									%h6 Tecnologias
-									%span
-										%strong HTML5
-										,
-										%strong SASS
-										,
-										%strong Responsive
-									
-									%h6 Cliente
-									%span Ib8 Tecnologia
-									
-									%h6 Ano
-									%span 2012
-										 	
+                .desc
+                  %h5 
+                    %a{:href => "#"} Ib8 Tecnologia Website
+                  %h6 Tecnologias
+                  %span
+                    %strong HTML5
+                    ,
+                    %strong SASS
+                    ,
+                    %strong Responsive
+                  
+                  %h6 Cliente
+                  %span Ib8 Tecnologia
+                  
+                  %h6 Ano
+                  %span 2012
+                      
 
 
