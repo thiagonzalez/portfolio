@@ -3,7 +3,6 @@ require 'compass'
 require 'sinatra'
 require 'haml'
 
-
 class SassEngine < Sinatra::Base
   set :views, File.join('public', 'stylesheets')
 
